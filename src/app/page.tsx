@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { SparklesCore } from "../../components/ui/sparkles";
+import { SparklesCore } from "../components/ui/sparkles";
 import { BsRobot } from "react-icons/bs";
 import Link from "next/link";
+import AIChatButton from "../components/AiChatButton";
 
 export default function Home() {
   return (
@@ -31,16 +32,14 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-1">
         <h2 className="text-2xl text-white">Introducing</h2>
-        <h1 className="md:text-7xl text-6xl lg:text-9xl font-bold text-center text-white relative z-20">
+        <h1 className="md:text-7xl text-8xl lg:text-9xl font-bold text-center text-white relative z-20">
           VelsEcho
         </h1>
         <p className="text-center text-l text-white">AI Assistent with power packed by GPT-4</p>
       </div>
-      <button className="flex flex-col justify-center items-center bg-white rounded-full w-20 h-20 p-2 absolute bottom-12 mb-8 duration-500 hover:bg-gray-400">
-        <BsRobot className="text-6xl text-black" />
-        <p className="text-center text-black font-bold">chat</p>
-      </button>
-      
+      <div className="z-50 absolute bottom-14">
+      <AIChatButton />
+      </div>
       <div className="absolute bottom-3 right-10 text-white"> 
         <p>Made with 🤍 by <strong><Link href="https://muzammilkarimi.github.io/ " target="_blank">MAK</Link></strong></p>
       </div>
