@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Script from "next/script";
 import { SparklesCore } from "../components/ui/sparkles";
 import { BsRobot } from "react-icons/bs";
 import Link from "next/link";
 import AIChatButton from "../components/AiChatButton";
-
 export default function Home() {
   return (
     <div className="h-[47rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -38,11 +38,13 @@ export default function Home() {
         <p className="text-center text-l text-white">AI Assistent with power packed by GPT-4</p>
       </div>
       <div className="z-50 absolute bottom-14">
-      <AIChatButton />
+      {/* <AIChatButton /> */}
       </div>
-      <div className="absolute bottom-3 right-10 text-white"> 
+      <div className="absolute bottom-5 text-white"> 
         <p>Made with 🤍 by <strong><Link href="https://muzammilkarimi.github.io/ " target="_blank">MAK</Link></strong></p>
       </div>
+      <script src="https://cdn.botpress.cloud/webchat/v1/inject.js" async></script>
+      <script src="https://mediafiles.botpress.cloud/07353cf7-5c46-46e0-ba00-30cd93201c8f/webchat/config.js" defer></script>
     </div>
   );
 }
